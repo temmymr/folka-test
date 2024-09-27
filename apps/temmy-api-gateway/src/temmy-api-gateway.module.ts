@@ -7,7 +7,7 @@ import { TokenModule } from './token/token.module';
 
 @Module({
   imports: [
-    MongooseModule.forRoot("mongodb+srv://temmy:rYRl2R2Udaj9IOa9@temmy.s5byp.mongodb.net/?retryWrites=true&w=majority&appName=temmy"),
+    MongooseModule.forRoot(process.env.DATABASE_URL),
     UsersModule,
     TokenModule,
   ],
